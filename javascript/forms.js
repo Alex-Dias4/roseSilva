@@ -34,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             // 4. Configurar o número e o redirecionamento
             // Substitua AQUI pelo número da academia (Código do País + DDD + Número)
             // Exemplo: 55 (Brasil) 11 (DDD) 999999999 (Número) -> "5511999999999"
-            const numeroWhatsApp = "5511999999999"; 
+            const numeroWhatsApp = "5574991049083"; 
 
             // Codificar a mensagem para formato URL (substitui espaços por %20, etc.)
             const urlEncoded = encodeURIComponent(mensagem);

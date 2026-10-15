@@ -9,8 +9,8 @@ section#inicio{
 }
 
 #inicio .text{
-    /*width: 100%;*/
-    height: 100%;
+    width: 40vw;
+    flex: 1;
     padding: 6.19rem 1.5rem 6.19rem 5.12rem; /* media querry mudar (quase tirar)*/
     display: flex;
     flex-direction: column;
@@ -33,7 +33,7 @@ section#inicio{
     color: #FF1F7B;
     text-align: right;
     font-family: "Montserrat";
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-style: normal;
     font-weight: 700;
     line-height: normal;
@@ -42,6 +42,7 @@ section#inicio{
 #inicio .text p{
     color: #FFF;
     font-family: "Montserrat";
+    text-wrap: wrap;
     font-size: 3rem;
     font-style: normal;
     font-weight: 400;
@@ -69,8 +70,8 @@ section#inicio{
     text-decoration: none;
 
     text-align: center;
-    -webkit-text-stroke-width: 2px;
-    -webkit-text-stroke-color: #FF007F;
+    -webkit-text-stroke-width: 1.4px;
+    -webkit-text-stroke-color: #ffffff;
     font-family: "Montserrat";
     font-size: 2rem;
     font-style: normal;
@@ -88,18 +89,18 @@ section#inicio{
 }
 
 #inicio .img{
-width: 100%;
-height: 100%;
+flex: 1;
+width: 40vw;
 padding: 0;
 margin: 0;
 display: flex;
 align-items: flex-end;
-justify-content: flex-end;
+justify-content: center;
 flex: 1 0 0;
 }
 
 #inicio .img img{
- height: 100%;
+ height: 90vh;
  width: 100%;
  margin: 0;
  padding: 0;

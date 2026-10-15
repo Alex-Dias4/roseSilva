@@ -1,14 +1,18 @@
 // Lista de imagens - Fácil de alterar no futuro
 const listaDeImagens = [
-    "./img/carossel/image1.png", 
-    "./img/carossel/image2.png", 
-    "./img/carossel/image3.png", 
-    "./img/carossel/image4.png", 
-    "./img/carossel/image5.png", 
-    "./img/carossel/image6.png",
-    "./img/carossel/image7.png", 
-    "./img/carossel/image8.png", 
-    "./img/carossel/image9.png"
+    "./img/carossel/img1-ratio.webp", 
+    "./img/carossel/img2-ratio.webp", 
+    "./img/carossel/img3-ratio.webp", 
+    "./img/carossel/img4-ratio.webp", 
+    "./img/carossel/img5-ratio.webp", 
+    "./img/carossel/img6-ratio.webp",
+    "./img/carossel/img7-ratio.webp", 
+    "./img/carossel/img8-ratio.webp", 
+    "./img/carossel/img9-ratio.webp",
+    "./img/carossel/img10-ratio.webp", 
+    "./img/carossel/img11-ratio.webp", 
+    "./img/carossel/img12-ratio.webp", 
+    "./img/carossel/img13-ratio.webp"
 ];
 
 let indiceAtual = 0;
