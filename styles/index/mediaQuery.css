@@ -331,7 +331,7 @@
     }
 
     section#duvidas .faq {
-        max-width: 70vw;
+        max-width: 80vw;
     }
 
 
@@ -365,9 +365,7 @@
         padding: 1.5rem !important;
         width: 95% !important;
     }
-}
 
-@media screen and (max-width: 480px) {
     section#duvidas .faq .question{
         font-size: 0.7rem;
     }
