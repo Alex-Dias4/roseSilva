@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
             className: "one",
             titulo: "Corrida das Musas",
             subfuncao: "Mais do que quilômetros percorridos",
-            descricaoCompleta: "É sobre superação, saúde, amizade e amor-próprio. Cada passo dado hoje representa dedicação, coragem e a escolha de cuidar de si mesma. Nossa corrida anual reúne centenas de mulheres para celebrar conquistas.",
+            descricaoCompleta: "É sobre superação, saúde, amizade e amor-próprio. Cada passo dado hoje representa dedicação, coragem e a escolha de cuidar de si mesma. Essa corrida reúniu centenas de mulheres para celebrar conquistas.",
             url: "https://seusite.com/corrida",
             textoBotao: "Inscreva-se na Corrida"
         },
