@@ -1,0 +1,366 @@
+/* ==========================================
+   MEDIA QUERIES - RESPONSIVIDADE PARA CELULARES E TABLETS
+   ========================================== */
+
+/* ==========================================
+   ESTILOS DO MENU HAMBURGUER (MOBILE)
+   ========================================== */
+
+   /* Botão de Fechar do Menu Mobile */
+.nav-close {
+    display: none; /* Oculto por padrão no desktop */
+}
+
+@media screen and (max-width: 900px) {
+    /* Exibe e posiciona o botão de fechar no topo do painel lateral */
+    .nav-close {
+        display: block;
+        position: absolute;
+        top: 20px;
+        right: 25px;
+        background: transparent;
+        border: none;
+        color: #fff;
+        font-size: 2.5rem;
+        cursor: pointer;
+        line-height: 1;
+        transition: color 0.3s;
+    }
+
+    .nav-close:hover {
+        color: #ff007f;
+    }
+}
+
+/* Quando a classe .header-escuro estiver ativa, as barrinhas do hambúrguer mudam para escuro */
+.header-escuro .menu-toggle span {
+    background-color: #000000 !important; /* Cor escura para combinar com o fundo branco */
+    transition: background-color 0.3s ease;
+}
+
+/* Opcional: Mantém as barrinhas com a cor certa caso o menu lateral esteja aberto */
+.menu-toggle.ativo span {
+    background-color: #fff !important; /* Mantém branco dentro do menu lateral que é escuro */
+}
+
+/* O botão hamburguer fica oculto no desktop */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 22px;
+    padding: 0;
+    z-index: 1001;
+}
+
+/* As barrinhas do hamburguer */
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Animação do botão para virar um "X" quando ativo */
+.menu-toggle.ativo span:nth-child(1) {
+    transform: translateY(9.5px) rotate(45deg);
+    background-color: #ff007f;
+}
+.menu-toggle.ativo span:nth-child(2) {
+    opacity: 0;
+}
+.menu-toggle.ativo span:nth-child(3) {
+    transform: translateY(-9.5px) rotate(-45deg);
+    background-color: #ff007f;
+}
+
+/* ==========================================
+   MEDIA QUERY PARA TELAS MENORES (CELULAR)
+   ========================================== */
+@media screen and (max-width: 900px) {
+
+    /* Organiza o header perfeitamente em linha (Logo na esquerda, Menu na direita) */
+    header .header {
+        position: fixed;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.8rem 1.5rem;
+        border-radius: 0 0 3rem 3rem;
+        width: 100%;
+        box-sizing: border-box;
+        height: auto;
+    }
+
+    header .logo img {
+        max-width: 100px;
+    }
+
+    /* Mostra o botão hamburguer no celular */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Transforma o <nav> em um menu suspenso/lateral oculto por padrão */
+    header nav.nav-container {
+        position: fixed !important;
+        top: 0 !important;
+        right: -100% !important; /* Começa escondido totalmente à direita fora da tela */
+        width: 80% !important;
+        max-width: 320px !important;
+        height: 100vh !important;
+        background-color: rgba(15, 15, 15, 0.98) !important;
+        backdrop-filter: blur(10px);
+        box-shadow: -10px 0 30px rgba(0, 0, 0, 0.9);
+        display: flex;
+        flex-direction: column;
+        /*justify-content: center;*/
+        padding-top: 4rem;
+        align-items: flex-start;
+        transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1) !important;
+        z-index: 99999 !important; /* Garante que fique acima de tudo */
+        border-left: 2px solid #ff007f;
+    }
+
+    /* Quando ativo, ele desliza exatamente para a borda direita da tela (right: 0) */
+    header nav.nav-container.ativo {
+        right: 0 !important;
+    }
+
+    /* Organiza os links dentro do menu */
+    header nav ul.nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 2rem;
+        padding: 0 2.5rem;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    header nav ul.nav-links a.nav_item {
+        font-size: 1.2rem;
+        color: #fff;
+        text-decoration: none;
+        font-weight: 600;
+    }
+
+    header nav ul.nav-links a.nav_item:hover {
+        color: #ff007f;
+    }
+}
+
+/* Telas menores (Tablets em modo retrato e Celulares maiores) */
+@media screen and (max-width: 900px) {
+
+    /* --- HEADER E NAVEGAÇÃO --- */
+    
+
+    
+
+    /* --- SEÇÃO INICIAL --- */
+    section#inicio {
+        flex-direction: column;
+        text-align: center;
+        padding: 2rem 1.6rem;
+        height: 200vh;
+        width: 100vw;
+    }
+
+    #inicio .text {
+        max-width: 100%;
+        width: 100vw;
+        height: fit-content;
+        padding: 0;
+        font-size: 1.5rem;
+        align-items: center;
+    }
+
+    #inicio .text strong,
+    #inicio .text p {
+        font-size: 2.1rem;
+    }
+
+    #inicio .text .button a {
+        width: fit-content;
+    }
+
+    #inicio .img {
+        width: 100%;
+    }
+
+    #inicio .img figure img {
+        max-width: 80%;
+        margin: 0 auto;
+    }
+
+    /* --- SEÇÃO SOBRE --- */
+    #sobre {
+        flex-direction: column;
+        padding: 2rem 1.6rem;
+        width: 100vw;
+    }
+
+    #sobre .img img,
+    #sobre .img {
+        width: 100%;
+    }
+
+    /* --- SEÇÃO MARCOS DA HISTÓRIA (CARDS) --- */
+    #marcos {
+        padding: 2rem 1.6rem;
+    }
+    #marcos .content {
+        grid-template-columns: 1fr;
+        /* Transforma o grid complexo em uma coluna única no mobile */
+    }
+
+    #marcos .diferencial h2 span {
+        font-size: 1.8rem;
+        -webkit-text-stroke-width: 1px;
+    }
+
+    #marcos .content .funcionaria {
+        grid-column: span 1 !important;
+        /* Força os cards a ocuparem toda a largura */
+        height: fit-content;
+        /* Ajusta a altura para telas menores */
+    }
+
+    #marcos .content .funcionaria h3 {
+        font-size: 2.5rem;
+    }
+
+    #marcos .diferencial .cards {
+        flex-direction: column;
+    }
+
+    /* Garante que a área do vídeo seja responsiva */
+    #musa{
+        padding: 2rem 1.6rem
+    }
+    #musa .video {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+        overflow: hidden;
+        padding: 0 1rem;
+        box-sizing: border-box;
+    }
+
+    /* Faz o iframe do YouTube adaptar-se fluidamente ao telemóvel */
+    #musa .video iframe {
+        width: 100% !important;
+        max-width: 560px;
+        height: auto !important;
+        aspect-ratio: 16 / 9;
+        /* Mantém a proporção perfeita do vídeo */
+        border-radius: 8px;
+    }
+
+    #musa .alunas .inscicao .after {
+        width: 100%;
+    }
+
+    /* --- SEÇÃO MUSA / FORMULÁRIO --- */
+    #musa .alunas .inscicao {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+
+    #musa .flex-row .w-30,
+    #musa .flex-row .w-70 {
+        width: 100%;
+    }
+
+    /* Ajusta a área dos comentários para empilhar no celular */
+    .comentariosArea {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 20px;
+    }
+
+    /* Cada card ocupa a largura total da tela no mobile, evitando quebrem o layout */
+    .comentario {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box;
+    }
+
+    /* Garante que o topo do comentário (nome, foto e estrelas) se mantenha alinhado */
+    .topComentario {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    section#passo {
+        width: 100%;
+        padding: 2rem 1.6rem;
+    }
+
+    section#passo h2 {
+        width: 100%;
+    }
+
+    section#passo .content {
+        grid-template-columns: 1fr;
+    }
+
+    /* --- SEÇÃO PASSO A PASSO --- */
+    #passo .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section#duvidas {
+        width: 100%;
+        padding: 2rem 1.6rem;
+    }
+
+    section#duvidas h2 {
+        width: 100%;
+    }
+
+    section#duvidas .faq {
+        max-width: 70vw;
+    }
+}
+
+/* Celulares Pequenos (Abaixo de 600px) */
+@media screen and (max-width: 600px) {
+
+    /* Reduz o tamanho da logo no topo para não ocupar espaço demais */
+    header .logo img {
+        max-width: 120px;
+    }
+
+    /* Ajusta o menu para links menores e organizados em bloco flexível */
+    header nav ul {
+        gap: 0.5rem 1rem;
+    }
+
+    header nav ul a.nav_item {
+        font-size: 0.85rem;
+    }
+
+    /* Ajustes gerais de tipografia para mobile */
+    h2 {
+        font-size: 1.8rem !important;
+        line-height: 2.2rem !important;
+    }
+
+    /* Ajuste finos nos modais e caixas de texto */
+    .modal-box {
+        padding: 1.5rem !important;
+        width: 95% !important;
+    }
+}

@@ -74,7 +74,7 @@ line-height: 122.091%;
 #sobre .img{
     width: 100%;
     display: flex;
-    width: 38.625rem;
+    /*width: 38.625rem;*/
     padding: 9.625rem 2.125rem;
     flex-direction: column;
     align-items: flex-start;
@@ -82,7 +82,7 @@ line-height: 122.091%;
 }
 
 #sobre .img img{
-    width: 34.375rem;
+   width: 32vw;
     border-radius: 1.5rem;
     box-shadow: 6px 7px 4px 0 rgba(0, 0, 0, 0.25);
 }

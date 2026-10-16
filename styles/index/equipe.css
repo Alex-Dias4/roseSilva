@@ -1,4 +1,4 @@
-section#equipe{
+section#marcos{
     background-color: #000;
     width: 100%;
     padding: 0 10vw;
@@ -10,13 +10,13 @@ section#equipe{
     padding-bottom:  5.9rem;
 }
 
-#equipe .diferencial{
+#marcos .diferencial{
     flex: 1 0 0;
     width: 100%;
     padding: 5.10rem 0; 
 }
 
-#equipe .diferencial h2{
+#marcos .diferencial h2{
     text-align: center;
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #FFF;
@@ -26,7 +26,7 @@ section#equipe{
     font-weight: 400;
     line-height: normal;
 }
-#equipe .diferencial h2 span{
+#marcos .diferencial h2 span{
     text-align: center;
     -webkit-text-stroke-width: 3px;
     -webkit-text-stroke-color: #FF1F7B;
@@ -38,14 +38,14 @@ section#equipe{
     color: transparent !important;
 }
 
-#equipe .cards{
+#marcos .cards{
     display: flex;
     margin: 8rem 0 5.9rem 0;
     gap:4.5rem;
 
 }
 
-#equipe .diferencial .cards .card{
+#marcos .diferencial .cards .card{
     display: flex;
     flex-direction: column;
     border-radius: 1.5rem;
@@ -59,7 +59,7 @@ section#equipe{
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
 }
 
-#equipe .diferencial .cards .card h3{
+#marcos .diferencial .cards .card h3{
     color: #ffffff;
     text-align: right;
     font-family: "Instrument Sans";
@@ -69,7 +69,7 @@ section#equipe{
     line-height: normal;
     
 }
-#equipe .diferencial .cards .card p{
+#marcos .diferencial .cards .card p{
     color: #FFF;
     font-family: "Iosevka Charon";
     font-size: 1rem;
@@ -78,14 +78,14 @@ section#equipe{
     line-height: normal;
 }
 
-#equipe .title{
+#marcos .title{
     display: flex;
     flex-direction: column;
     width: 100%;
     align-self: start;
     align-items: flex-start;
 }
-#equipe .title p{
+#marcos .title p{
     text-align: left;
     color: #FF007F;
     font-family: Urbanist;
@@ -96,7 +96,7 @@ section#equipe{
     letter-spacing: 0.1875rem;
     text-transform: uppercase;
 }
-#equipe .title h2{
+#marcos .title h2{
     color: #FFF;
     font-family: Montserrat;
     font-size: 6rem;
@@ -107,7 +107,7 @@ section#equipe{
     text-transform: uppercase;
     
 }
-#equipe .title hr{
+#marcos .title hr{
     width: 100%;
     border: none;
     height: 2px; /* Define a espessura */
@@ -115,14 +115,14 @@ section#equipe{
     margin-bottom: 1.2rem;
 }
 
-#equipe .content{
+#marcos .content{
     display: grid;
     grid-template-columns: repeat(6, 1fr);
     gap: 0.75rem; 
 }
-#equipe .content .funcionaria{
+#marcos .content .funcionaria{
     width: 100%;
-    height: 26rem;
+    height: 100%;
     display: flex;
     gap:0.8rem;
     padding: 2rem;
@@ -137,17 +137,17 @@ section#equipe{
     border-image: linear-gradient(to bottom, #ff007f, rgba(0, 0, 0, 0.85)) 1;
 }
 
-#equipe .content .funcionaria:hover{
+#marcos .content .funcionaria:hover{
  transform: scale(1.1); 
  z-index: 2;
 }
-#equipe .content .funcionaria:nth-child(-n+3){
+#marcos .content .funcionaria:nth-child(-n+3){
     grid-column: span 2; 
 } 
-#equipe .content .funcionaria:nth-child(n+4) {
+#marcos .content .funcionaria:nth-child(n+4) {
   grid-column: span 3; 
 }
-#equipe .content .funcionaria.one{
+#marcos .content .funcionaria.one{
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), 
         url("../../img/funcionarias/corridaMusas.png"); 
@@ -159,7 +159,7 @@ section#equipe{
     background-color: #0b0d10;
 
 }
-#equipe .content .funcionaria.two{
+#marcos .content .funcionaria.two{
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), 
         url("../../img/funcionarias/aulaDanca.png"); 
@@ -171,7 +171,7 @@ section#equipe{
     background-color: #0b0d10;
 
 }
-#equipe .content .funcionaria.three{
+#marcos .content .funcionaria.three{
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), 
         url("../../img/funcionarias/Premio.png"); 
@@ -183,7 +183,7 @@ section#equipe{
     background-color: #ffffff;
 
 }
-#equipe .content .funcionaria.for{
+#marcos .content .funcionaria.for{
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), 
         url("../../img/funcionarias/RoseSilva.webp"); 
@@ -195,7 +195,7 @@ section#equipe{
     background-color: #25a0bb;
 
 }
-#equipe .content .funcionaria.five{
+#marcos .content .funcionaria.five{
     background-image: 
         linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.85)), 
         url("../../img/funcionarias/desafio30Dias.png"); 
@@ -208,19 +208,19 @@ section#equipe{
 
 }
 
-#equipe .content .funcionaria h3{
+#marcos .content .funcionaria h3{
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #FFF;
     color: transparent;
     font-family: Montserrat;
-    font-size: 4.64063rem;
+    font-size: 3rem;
     font-style: normal;
     font-weight: 700;
     line-height: 4.64063rem; /* 100% */
     letter-spacing: -0.09281rem;
     text-transform: uppercase;
 }
-#equipe .content .funcionaria .funcao{
+#marcos .content .funcionaria .funcao{
     color: #FF007F;
     background-color: rgba(0, 0, 0, 0.64);
     padding: 0.2rem 0.4rem;
@@ -233,7 +233,7 @@ section#equipe{
     letter-spacing: 0.126rem;
     text-transform: uppercase;
 }
-#equipe .content .funcionaria p{
+#marcos .content .funcionaria p{
     color: #FFF;
     font-family: Urbanist;
     font-size: 0.95rem;

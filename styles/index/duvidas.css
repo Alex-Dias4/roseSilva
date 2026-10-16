@@ -34,7 +34,6 @@ section#duvidas .subTitle hr{
     background: #FF007F;;
 }
 section#duvidas h2{
-    width: 45rem;
     margin-bottom: 0.69rem;
     color: #FFF;
     font-family: Montserrat;
@@ -55,7 +54,6 @@ section#duvidas p{
 }
 section#duvidas .faq{
     display: flex;
-    width: 48rem;
     max-height: 3.5rem;
     flex-direction: column;
     background: #0A0A0A;

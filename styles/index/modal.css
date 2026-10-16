@@ -1,0 +1,232 @@
+/* Fundo escuro cobrindo a tela */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Caixa do Modal herdando o estilo visual dos cards */
+.modal-box {
+    width: 100%;
+    max-width: 700px;
+    min-height: 400px;
+    display: flex;
+    gap: 0.8rem;
+    padding: 3rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: #3d3d3d;
+    border-left-style: solid;
+    border-left-width: 6px;
+    position: relative;
+    border-image: linear-gradient(to bottom, #ff007f, rgba(0, 0, 0, 0.85)) 1;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.7);
+    border-radius: 4px;
+}
+
+/* Botão de fechar (X) estilizado no canto superior direito */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 10;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+}
+
+.modal-close:hover {
+    color: #ff007f;
+}
+
+/* Estilização dos textos dentro do modal seguindo o padrão dos cards */
+.modal-box h3 {
+    -webkit-text-stroke-width: 2px;
+    -webkit-text-stroke-color: #FFF;
+    color: transparent;
+    font-family: Montserrat;
+    font-size: 2.8rem; /* Ajustado para caber bem no modal */
+    font-style: normal;
+    font-weight: 700;
+    line-height: 3rem;
+    letter-spacing: -0.05rem;
+    text-transform: uppercase;
+}
+
+.modal-box .funcao {
+    color: #FF007F;
+    background-color: rgba(0, 0, 0, 0.75);
+    padding: 0.3rem 0.6rem;
+    border-radius: 12px;
+    font-family: Montserrat;
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.modal-box p {
+    color: #FFF;
+    font-family: Urbanist;
+    font-size: 1.05rem;
+    line-height: 1.6rem;
+    margin-bottom: 1rem;
+    background-color: rgba(0, 0, 0, 0.5); /* Melhora a leitura sobre a imagem */
+    padding: 0.5rem 0.8rem;
+    border-radius: 6px;
+}
+
+/* Botão de redirecionamento no modal */
+.modal-action-btn {
+    display: inline-block;
+    background-color: #ff007f;
+    color: #fff;
+    padding: 12px 24px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    font-family: Montserrat;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+.modal-action-btn:hover {
+    background-color: #e0006f;
+}
+
+
+/* REAPROVEITANDO AS MESMAS CLASSES DE FUNDO DAS FOTOS (.one, .two, etc.) PARA O MODAL */
+.modal-box.one {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../../img/funcionarias/corridaMusas.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.modal-box.two {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../../img/funcionarias/aulaDanca.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.modal-box.three {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../../img/funcionarias/Premio.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: #ffffff;
+}
+
+.modal-box.for {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../../img/funcionarias/RoseSilva.webp");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+
+.modal-box.five {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../../img/funcionarias/desafio30Dias.png");
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
+/*amimação*/
+
+/* Fundo escuro cobrindo a tela */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
+.modal-overlay.ativo {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Caixa do Modal */
+.modal-box {
+    width: 100%;
+    max-width: 700px;
+    min-height: 400px;
+    display: flex;
+    gap: 0.8rem;
+    padding: 3rem;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    background-color: #3d3d3d;
+    border-left-style: solid;
+    border-left-width: 6px;
+    position: absolute; /* Mudado para absolute para permitir a transição de coordenadas */
+    border-image: linear-gradient(to bottom, #ff007f, rgba(0, 0, 0, 0.85)) 1;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
+    border-radius: 4px;
+    
+    /* Configuração da animação fluida de redimensionamento e posição */
+    transition: all 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+    transform-origin: center center;
+    box-sizing: border-box;
+}
+
+/* Botão de fechar (X) */
+.modal-close {
+    position: absolute;
+    top: 20px;
+    right: 25px;
+    font-size: 35px;
+    cursor: pointer;
+    color: #fff;
+    z-index: 10;
+    opacity: 0;
+    transition: opacity 0.3s ease 0.2s; /* Aparece suavemente após o modal expandir */
+}
+
+.modal-overlay.ativo .modal-close {
+    opacity: 1;
+}
+
+.modal-close:hover {
+    color: #ff007f;
+}
+
+/* Oculta os textos internos e botão do modal enquanto ele é miniatura, revelando depois */
+.modal-box .conteudo-interno {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    width: 100%;
+}
+
+.modal-overlay.ativo .modal-box .conteudo-interno {
+    opacity: 1;
+    transition: opacity 0.3s ease 0.2s;
+}
+
+/* Classes de imagem de fundo do modal (as mesmas dos cards) */
+.modal-box.one { background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../../img/funcionarias/corridaMusas.png"); background-size: cover; background-position: center; }
+.modal-box.two { background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../../img/funcionarias/aulaDanca.png"); background-size: cover; background-position: center; }
+.modal-box.three { background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../../img/funcionarias/Premio.png"); background-size: cover; background-position: center; background-color: #ffffff; }
+.modal-box.for { background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../../img/funcionarias/RoseSilva.webp"); background-size: cover; background-position: center top; }
+.modal-box.five { background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)), url("../../img/funcionarias/desafio30Dias.png"); background-size: cover; background-position: center top; }
