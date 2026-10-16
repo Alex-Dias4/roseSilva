@@ -333,6 +333,8 @@
     section#duvidas .faq {
         max-width: 70vw;
     }
+
+
 }
 
 /* Celulares Pequenos (Abaixo de 600px) */
@@ -362,5 +364,11 @@
     .modal-box {
         padding: 1.5rem !important;
         width: 95% !important;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    section#duvidas .faq .question{
+        font-size: 0.7rem;
     }
 }
